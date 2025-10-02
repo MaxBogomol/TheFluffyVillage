@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --text-color:#350955;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: #ffbfc8;
+    background-image: radial-gradient(#e2a4ad 5px, transparent 0);
+    background-size: 20px 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 14px 0;
+    color: var(--text-color);
+}
+
+p {
+    margin: 4px 0;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+li::marker {
+    color: var(--main-color);
+}
+
+.title {
+    font-family: "Arvo", serif;
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.head {
+    width: 85%;
+    text-align: left;
+    padding: 5px 25px;
+    border-radius: 25px;
+    outline: 5px dotted var(--main-color-translucent);
+    outline-offset: -20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.box {
+    width: 85%;
+    margin: 10px 0;
+    text-align: left;
+    padding: 25px 25px;
+    border-radius: 25px;
+    outline: 5px dotted var(--main-color-translucent);
+    outline-offset: -20px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
