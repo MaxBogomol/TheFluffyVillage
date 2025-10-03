@@ -29,7 +29,8 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    margin: 14px 0;
+    font-family: "Arvo", serif;
+    margin: 22px 0;
     color: var(--text-color);
 }
 
@@ -41,10 +42,6 @@ p {
 
 li::marker {
     color: var(--main-color);
-}
-
-.title {
-    font-family: "Arvo", serif;
 }
 
 .content {
@@ -107,4 +104,11 @@ li::marker {
 .topnav a.main {
     font-size: 28px;
     margin-right: auto;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
