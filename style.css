@@ -41,7 +41,7 @@ p {
 }
 
 li::marker {
-    color: var(--main-color);
+    color: var(--text-color);
 }
 
 .content {
@@ -80,6 +80,7 @@ li::marker {
     font-family: "Arvo", serif;
     text-align: center;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .topnav a {
