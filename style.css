@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --text-color:#350955;
+    --main-color:#350955;
 }
 
 * {
@@ -21,6 +21,7 @@ body {
     background: #ffbfc8;
     background-image: radial-gradient(#e2a4ad 5px, transparent 0);
     background-size: 20px 20px;
+    animation: slide-in 100s linear infinite;
 }
 
 img {
@@ -31,17 +32,17 @@ img {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Arvo", serif;
     margin: 22px 0;
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
 p {
     margin: 4px 0;
     font-size: 22px;
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
-li::marker {
-    color: var(--text-color);
+a {
+    color: var(--main-color);
 }
 
 .content {
@@ -58,10 +59,11 @@ li::marker {
     text-align: left;
     padding: 5px 25px;
     border-radius: 25px;
-    outline: 2px dotted var(--text-color);
+    outline: 2px dotted var(--main-color);
     outline-offset: -5px;
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
 }
 
 .box {
@@ -70,10 +72,29 @@ li::marker {
     text-align: left;
     padding: 25px 25px;
     border-radius: 25px;
-    outline: 2px dotted var(--text-color);
+    outline: 2px dotted var(--main-color);
     outline-offset: -5px;
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
+.icon {
+    border-radius: 15px;
+    border: 2px dotted var(--main-color);
+    padding: 2px;
+    display: inline-block;
+}
+
+.icon img {
+    border-radius: 10px;
+    margin: 0;
+    cursor: pointer;
+    display: block;
+}
+
+.round img {
+    border-radius: 10px;
 }
 
 .topnav {
@@ -87,7 +108,7 @@ li::marker {
     text-decoration: none;
     padding: 10px 10px;
     font-size: 24px;
-    color: var(--text-color);
+    color: var(--main-color);
 }
 
 .topnav a.separator {
@@ -112,4 +133,29 @@ li::marker {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+@keyframes slide-in {
+    from {
+        background-position: 0% 0%;
+    }
+
+    to {
+        background-position: 100% 100%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .head {
+        width: 95%;
+    }
+
+    .box {
+        width: 95%;
+    }
+
+    .icon img {
+        width: 150px;
+        height: 150px;
+    }
 }
