@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
     margin: 4px 0;
-    font-size: 1.2rem;
+    font-size: 22px;
     color: var(--text-color);
 }
 
@@ -47,8 +47,8 @@ li::marker {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1%;
-    margin-bottom: 1%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .head {
@@ -56,8 +56,8 @@ li::marker {
     text-align: left;
     padding: 5px 25px;
     border-radius: 25px;
-    outline: 5px dotted var(--main-color-translucent);
-    outline-offset: -20px;
+    outline: 2px dotted var(--text-color);
+    outline-offset: -5px;
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
@@ -68,8 +68,38 @@ li::marker {
     text-align: left;
     padding: 25px 25px;
     border-radius: 25px;
-    outline: 5px dotted var(--main-color-translucent);
-    outline-offset: -20px;
+    outline: 2px dotted var(--text-color);
+    outline-offset: -5px;
     backdrop-filter: blur(5px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+}
+
+.topnav {
+    font-family: "Arvo", serif;
+    text-align: center;
+    display: flex;
+}
+
+.topnav a {
+    text-decoration: none;
+    padding: 10px 10px;
+    font-size: 24px;
+    color: var(--text-color);
+}
+
+.topnav a.separator {
+    padding: 10px 15px;
+}
+
+.topnav a.language {
+    padding: 10px 5px;
+}
+
+.topnav a.slash {
+    padding: 10px 2px;
+}
+
+.topnav a.main {
+    font-size: 28px;
+    margin-right: auto;
 }
