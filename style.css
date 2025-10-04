@@ -32,7 +32,8 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Arvo", serif;
-    margin: 22px 0;
+    font-size: 30px;
+    margin: 12px 0;
     color: var(--main-color);
 }
 
@@ -182,6 +183,7 @@ a {
 }
 
 .belt-title {
+    text-decoration: none;
     font-family: "Arvo", serif;
     padding: 5px 10px;
     font-size: 24px;
@@ -278,6 +280,22 @@ a {
 }
 
 @media screen and (max-width: 960px) {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .topnav a {
+        font-size: 20px;
+    }
+
+    .topnav a.main {
+        font-size: 24px;
+    }
+
     .head {
         width: 95%;
     }
@@ -286,8 +304,57 @@ a {
         width: 95%;
     }
 
-    .icon img {
-        width: 150px;
-        height: 150px;
+    .icon {
+        width: 158px;
+        height: 158px;
+    }
+
+    .pfp {
+        width: 88px;
+        height: 88px;
+    }
+
+    .belt-title {
+        font-size: 20px;
+    }
+
+    .belt-text {
+        font-size: 18px;
+    }
+
+    .social {
+        width: 30px;
+        height: 30px;
+        margin: 0 3px;
+    }
+
+    .social-fluffyvillage {
+        width: 30px;
+        height: 30px;
+        margin: 0 3px;
+    }
+
+    .social-github {
+        width: 30px;
+        height: 30px;
+        margin: 0 3px;
+    }
+
+    .social-curseforge {
+        width: 30px;
+        height: 30px;
+        margin: 0 3px;
+    }
+
+    .social-modrinth {
+        width: 30px;
+        height: 30px;
+        margin: 0 3px;
+    }
+
+    .social-discord {
+        width: 30px;
+        height: 30px;
+        margin: 0 3px;
     }
 }
