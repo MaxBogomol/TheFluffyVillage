@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
 
 :root {
     --main-color:#350955;
@@ -31,7 +31,8 @@ img {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Arvo", serif;
+    font-family: "Forum", serif;
+    font-weight: bold;
     font-size: 30px;
     margin: 12px 0;
     color: var(--main-color);
@@ -121,7 +122,8 @@ a {
 }
 
 .topnav {
-    font-family: "Arvo", serif;
+    font-family: "Forum", serif;
+    font-weight: bold;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -184,7 +186,8 @@ a {
 
 .belt-title {
     text-decoration: none;
-    font-family: "Arvo", serif;
+    font-family: "Forum", serif;
+    font-weight: bold;
     padding: 5px 10px;
     font-size: 24px;
     color: var(--main-color);
@@ -294,6 +297,11 @@ a {
 
     .topnav a.main {
         font-size: 24px;
+        padding: 10px 0px;
+    }
+
+    .topnav a.space {
+        padding: 10px 0px;
     }
 
     .head {
