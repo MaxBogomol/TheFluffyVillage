@@ -340,15 +340,15 @@ a {
 
 @media screen and (max-width: 960px) {
     h1, h2, h3, h4, h5, h6 {
-        font-size: 26px;
+        font-size: 22px;
     }
 
     p {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .topnav a {
-        font-size: 20px;
+        font-size: 16px;
     }
 
     .topnav a.main {
@@ -446,5 +446,116 @@ a {
         width: 30px;
         height: 30px;
         margin: 0 3px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    h1, h2, h3, h4, h5, h6 {
+        font-size: 26px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .topnav a {
+        font-size: 20px;
+    }
+
+    .topnav a.main {
+        font-size: 20px;
+        padding: 5px 0px;
+    }
+
+    .topnav a.space {
+        padding: 5px 0px;
+    }
+
+    .head {
+        width: 95%;
+    }
+
+    .box {
+        width: 95%;
+    }
+
+    .post {
+        width: 98%;
+    }
+
+    .icon {
+        width: 108px;
+        height: 108px;
+    }
+
+    .pfp {
+        width: 58px;
+        height: 58px;
+    }
+
+    .belt-title {
+        font-size: 16px;
+        padding: 1px 3px;
+    }
+
+    .belt-title-translucent {
+        font-size: 16px;
+        padding: 1px 3px;
+    }
+
+    .belt-text {
+        font-size: 14px;
+        padding: 1px 3px;
+    }
+
+    .grid-images {
+        columns: 3 5px;
+        column-gap: 5px;
+    }
+
+    .grid-images img {
+        margin-bottom: 5px;
+    }
+
+    .social {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px;
+    }
+
+    .social-fluffyvillage {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px;
+    }
+
+    .social-github {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px;
+    }
+
+    .social-curseforge {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px;
+    }
+
+    .social-modrinth {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px;
+    }
+
+    .social-discord {
+        width: 20px;
+        height: 20px;
+        margin: 0 2px;
+    }
+
+    .flag {
+        width: 16px;
+        height: 16px;
+        margin: 0 2px;
     }
 }
