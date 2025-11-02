@@ -354,13 +354,21 @@ a {
         font-size: 20px;
     }
 
-    .topnav a.main {
-        font-size: 24px;
-        padding: 10px 0px;
+    .topnav a.language {
+        padding: 8px 5px;
+    }
+
+    .topnav a.slash {
+        padding: 8px 2px;
     }
 
     .topnav a.space {
-        padding: 10px 0px;
+        padding: 8px 0px;
+    }
+
+    .topnav a.main {
+        font-size: 24px;
+        padding: 5px 0px;
     }
 
     .head {
@@ -472,12 +480,20 @@ a {
         font-size: 16px;
     }
 
-    .topnav a.main {
-        font-size: 20px;
-        padding: 2px 0px;
+    .topnav a.language {
+        padding: 4px 6px;
+    }
+
+    .topnav a.slash {
+        padding: 4px 2px;
     }
 
     .topnav a.space {
+        padding: 4px 0px;
+    }
+
+    .topnav a.main {
+        font-size: 20px;
         padding: 2px 0px;
     }
 
