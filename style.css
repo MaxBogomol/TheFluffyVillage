@@ -245,6 +245,10 @@ a {
     z-index: 2;
 }
 
+.image-404 {
+    height: auto;
+}
+
 .social {
     filter: invert(12%) sepia(39%) saturate(4710%) hue-rotate(264deg) brightness(80%) contrast(109%); /*#350955*/
     transition: all 0.5s;
@@ -457,6 +461,11 @@ a {
         margin-bottom: 5px;
     }
 
+    .image-404 {
+        width: 300px;
+    }
+
+
     .social {
         width: 30px;
         height: 30px;
@@ -599,6 +608,10 @@ a {
 
     .grid-images img {
         margin-bottom: 5px;
+    }
+
+    .image-404 {
+        width: 200px;
     }
 
     .social {
