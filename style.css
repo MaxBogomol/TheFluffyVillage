@@ -27,7 +27,7 @@ body {
 
 img {
     max-width: 100%;
-    width: auto;
+    max-height: 100%;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,6 +46,7 @@ p {
 
 a {
     color: var(--main-color);
+    flex-shrink: 0;
 }
 
 .content {
@@ -113,6 +114,10 @@ a {
     margin: 0;
     cursor: pointer;
     display: block;
+}
+
+.a {
+    flex-shrink: 0;
 }
 
 .pfp {
@@ -340,10 +345,12 @@ a {
 
     .belt-title {
         font-size: 20px;
+        padding: 1px 5px;
     }
 
     .belt-text {
         font-size: 18px;
+        padding: 1px 5px;
     }
 
     .social {
