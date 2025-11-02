@@ -340,15 +340,18 @@ a {
 
 @media screen and (max-width: 960px) {
     h1, h2, h3, h4, h5, h6 {
-        font-size: 22px;
+        font-size: 26px;
+        margin: 10px 0;
     }
 
     p {
-        font-size: 14px;
+        margin: 3px 0;
+        font-size: 18px;
     }
 
     .topnav a {
-        font-size: 16px;
+        padding: 8px 8px;
+        font-size: 20px;
     }
 
     .topnav a.main {
@@ -365,10 +368,14 @@ a {
     }
 
     .box {
+        margin: 8px 0;
+        padding: 20px 20px;
         width: 95%;
     }
 
     .post {
+        margin: 8px 0;
+        padding: 20px 20px;
         width: 98%;
     }
 
@@ -451,36 +458,43 @@ a {
 
 @media screen and (max-width: 560px) {
     h1, h2, h3, h4, h5, h6 {
-        font-size: 26px;
+        font-size: 22px;
+        margin: 8px 0;
     }
 
     p {
-        font-size: 18px;
+        margin: 2px 0;
+        font-size: 14px;
     }
 
     .topnav a {
-        font-size: 20px;
+        padding: 6px 6px;
+        font-size: 16px;
     }
 
     .topnav a.main {
         font-size: 20px;
-        padding: 5px 0px;
+        padding: 2px 0px;
     }
 
     .topnav a.space {
-        padding: 5px 0px;
+        padding: 2px 0px;
     }
 
     .head {
-        width: 95%;
+        width: 98%;
     }
 
     .box {
-        width: 95%;
+        margin: 6px 0;
+        padding: 15px 15px;
+        width: 98%;
     }
 
     .post {
-        width: 98%;
+        margin: 6px 0;
+        padding: 15px 15px;
+        width: 99%;
     }
 
     .icon {
