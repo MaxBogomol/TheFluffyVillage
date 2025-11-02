@@ -217,6 +217,25 @@ a {
     color: var(--main-color);
 }
 
+.grid-images {
+    columns: 6 10px;
+    column-gap: 10px;
+}
+
+.grid-images img {
+    width: 100%;
+    height: auto;
+    break-inside: avoid;
+    margin-bottom: 10px;
+    transition: all 0.2s;
+    z-index: 1;
+}
+
+.grid-images img:hover {
+    transform: scale(1.25);
+    z-index: 2;
+}
+
 .social {
     filter: invert(12%) sepia(39%) saturate(4710%) hue-rotate(264deg) brightness(80%) contrast(109%); /*#350955*/
     transition: all 0.5s;
@@ -351,6 +370,15 @@ a {
     .belt-text {
         font-size: 18px;
         padding: 1px 5px;
+    }
+
+    .grid-images {
+        columns: 3 5px;
+        column-gap: 5px;
+    }
+
+    .grid-images img {
+        margin-bottom: 5px;
     }
 
     .social {
