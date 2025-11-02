@@ -241,7 +241,7 @@ a {
 }
 
 .grid-images img:hover {
-    transform: scale(1.25);
+    transform: scale(1.05);
     z-index: 2;
 }
 
