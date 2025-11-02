@@ -82,6 +82,18 @@ a {
     transition: all 0.3s;
 }
 
+.post {
+    width: 95%;
+    margin: 10px 0;
+    text-align: left;
+    padding: 25px 25px;
+    border-radius: 25px;
+    outline: 2px dotted var(--main-color);
+    outline-offset: -5px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s;
+}
+
 .separator {
     width: 100%;
     height: 2px;
@@ -310,6 +322,10 @@ a {
 
     .box {
         width: 95%;
+    }
+
+    .post {
+        width: 98%;
     }
 
     .icon {
