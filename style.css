@@ -354,16 +354,16 @@ a {
         font-size: 20px;
     }
 
+    .topnav a.space {
+        padding: 8px 0px;
+    }
+
     .topnav a.language {
         padding: 8px 5px;
     }
 
     .topnav a.slash {
         padding: 8px 2px;
-    }
-
-    .topnav a.space {
-        padding: 8px 0px;
     }
 
     .topnav a.main {
@@ -476,8 +476,12 @@ a {
     }
 
     .topnav a {
-        padding: 6px 6px;
+        padding: 4px 6px;
         font-size: 16px;
+    }
+
+    .topnav a.space {
+        padding: 4px 0px;
     }
 
     .topnav a.language {
@@ -486,10 +490,6 @@ a {
 
     .topnav a.slash {
         padding: 4px 2px;
-    }
-
-    .topnav a.space {
-        padding: 4px 0px;
     }
 
     .topnav a.main {
