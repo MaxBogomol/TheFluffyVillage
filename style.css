@@ -173,6 +173,7 @@ a {
 .center {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 .belt-row {
@@ -368,6 +369,19 @@ a {
     transform: scale(1.3);
 }
 
+.badge {
+    image-rendering: pixelated;
+    transition: all 0.2s;
+    cursor: pointer;
+    margin: 0 5px;
+    z-index: 1;
+}
+
+.badge:hover {
+    transform: scale(2.0);
+    z-index: 2;
+}
+
 @keyframes slide-in {
     from {
         background-position: 0% 0%;
@@ -521,8 +535,8 @@ a {
     }
 
     .flag {
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
         margin: 0 3px;
     }
 }
