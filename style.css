@@ -236,6 +236,11 @@ a {
 
 .grid-image {
     margin: auto;
+    cursor: pointer;
+}
+
+.grid-image:before {
+    content: "Broken";
 }
 
 .grid-images img {
