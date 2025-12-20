@@ -270,36 +270,11 @@ a {
 .collapsible-header {
     cursor: pointer;
     display: flex;
+    align-items: center;
     user-select: none;
 }
 
 .collapsible-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    margin-right: 18px;
-}
-
-.arrow-sub {
-    transition: transform 0.2s ease;
-    margin-right: 8px;
-}
-
-.collapsible-sub.open .arrow {
-    transform: rotate(90deg);
-}
-
-.collapsible-sub.open .arrow {
-    transform: rotate(90deg);
-}
-
-.collapsible-sub-header {
-    cursor: pointer;
-    display: flex;
-    user-select: none;
-}
-
-.collapsible-sub-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
