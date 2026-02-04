@@ -1,0 +1,9 @@
+:root {
+    --main-color:#ffbfc8;
+    --main-color-translucent:#ffbfc880;
+}
+
+body {
+    background-color: #0d1117;
+    background-image: radial-gradient(#131922 5px, transparent 0);
+}
