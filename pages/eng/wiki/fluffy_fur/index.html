@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Fluffy Fur Wiki</title>
+
+    <meta property="og:title" content="Home - Fluffy Fur Wiki">
+    <meta property="og:description" content="Technical information about Fluffy Fur">
+    <meta property="og:url" content="https://fluffy-village.dev/pages/eng/wiki/fluffy_fur/index.html">
+    <meta property="og:image" content="https://fluffy-village.dev/assets/creations/fluffy_fur/icon.png">
+    <meta property="og:logo" content="https://fluffy-village.dev/assets/favicon_wiki.png">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon_wiki.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles/wiki.css">
+</head>
+<body>
+    <div class="content">
+        <div class="head">
+            <div class="topnav">
+                <a class="main" href="/pages/eng/wiki/index.html">The Fluffy Wiki</a>
+                <a href="/pages/eng/index.html">Main</a>
+                <a class="space"></a>
+                <a class="language" href="/pages/eng/wiki/fluffy_fur/index.html">eng</a>
+                <a class="slash">/</a>
+                <a class="language" href="/pages/ru/wiki/fluffy_fur/index.html">ru</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="center">
+                <h1 id="home">Home</h1>
+            </div>
+            <h1 id="about">About</h1>
+            <p>
+                &quot;Fluffy Fur&quot; - a mod library by MaxBogomol.<br>
+                When I was developing Wizard&#39;s Reborn, all the renders code were inside the mod, but then I realized that I wanted to create other mods.<br>
+                So, I took all the features from Wizard&#39;s Reborn and moved them to my library called Fluffy Fur, greatly improving everything and adding a lot of new things.<br>
+                It&#39;s very furry.
+            </p>
+            <p>
+                If you want to use my library in your mod, you should know that you should have at least some experience in modding.<br>
+                And remember, the library should not and does not do everything for you. It is just a tool to simplify.
+            </p>
+            <br></br>
+            <div class="separator"></div>
+            <h1 id="setup-guide">Setup Guide</h1>
+            <div class="center">
+                <div class="post">
+<pre><code>gradle.properties:
+minecraft_version = version here
+fluffy_fur_version = version here
+</code></pre>
+                </div>
+            </div>
+            <br></br>
+            <p id="installation-stable"><strong>Installation Stable</strong></p>
+            <p>Recommended installation option.</p>
+            <div class="center">
+                <div class="post">
+<pre><code>// Modrinth way
+repositories {
+  maven {
+       name = &quot;Modrinth&quot;
+       url = &quot;https://api.modrinth.com/maven&quot;
+   }
+}
+
+dependencies {
+   // your code here...
+   implementation fg.deobf(&quot;maven.modrinth:fluffy-fur:${minecraft_version}-${fluffy_fur_version}&quot;)
+}
+ 
+// CurseForge way
+repositories {
+   maven { url &quot;https://cursemaven.com&quot;}
+}
+
+dependencies {
+   // your code here...
+   implementation fg.deobf(&quot;curse.maven:fluffy-fur-1097456:${fluffy_fur_version}&quot;) // &lt;-- version from CurseForge here
+}
+</code></pre>
+                </div>
+            </div>
+            <br></br>
+            <p id="installation-dev"><strong>Installation Dev</strong></p>
+            <p>I use this option when developing mods to quickly change the code.<br>Not recommended.</p>
+            <p>Duplicate the project, run it in IDE and publish to local maven using <em>Running:</em> <code>gradlew publishToMavenLocal</code></p>
+            <div class="center">
+                <div class="post">
+<pre><code>
+repositories {
+   mavenLocal();
+}
+
+dependencies {
+   // your code here...
+   implementation fg.deobf(&quot;mod.maxbogomol.fluffy_fur:fluffy_fur:${minecraft_version}-${fluffy_fur_version}&quot;)
+}
+</code></pre>
+                </div>
+            </div>
+            <br></br>
+            <div class="separator"></div>
+            <h1 id="mixins">Mixins</h1>
+            <p>Fluffy Fur uses mixins, and without the appropriate plugin in your project, the game will not start.</p>
+            <div class="center">
+                <div class="post">
+<pre><code>buildscript {
+    repositories {
+        maven { url = &#39;https://files.minecraftforge.net/maven&#39; }
+        maven { url = &#39;https://repo.spongepowered.org/repository/maven-public/&#39; }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: &#39;net.minecraftforge.gradle&#39;, name: &#39;ForgeGradle&#39;, version: &#39;6.0.+&#39;, changing: true
+        classpath group: &#39;org.spongepowered&#39;, name: &#39;mixingradle&#39;, version: &#39;0.7-SNAPSHOT&#39;
+    }
+}
+
+plugins {
+    id &#39;eclipse&#39;
+    id &#39;maven-publish&#39;
+    id &#39;net.minecraftforge.gradle&#39; version &#39;[6.0,6.2)&#39;
+    id &#39;org.spongepowered.mixin&#39; version &#39;[0.7,0.8)&#39;
+}
+</code></pre>
+                </div>
+            </div>
+            <p>For more info, consult the <a href="https://github.com/SpongePowered/Mixin/wiki/Mixins-on-Minecraft-Forge">Mixin wiki</a>.</p>
+            <br></br>
+            <div class="separator"></div>
+            <h1 id="features">Features</h1>
+            <div class="separator"></div>
+            <div class="center">
+                <div class="round">
+                    <p>
+                        <a href="https://github.com/MaxBogomol/TheFluffyVillage"><img src="https://img.shields.io/github/stars/maxbogomol/TheFluffyVillage?style=for-the-badge&color=6aa84f&logo=github&label=THIS%20WEBSITE" alt="Github"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

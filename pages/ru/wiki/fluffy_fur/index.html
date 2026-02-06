@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная - Fluffy Fur Вики</title>
+
+    <meta property="og:title" content="Главная - Fluffy Fur Вики">
+    <meta property="og:description" content="Техническая информация о Fluffy Fur">
+    <meta property="og:url" content="https://fluffy-village.dev/pages/кг/wiki/fluffy_fur/index.html">
+    <meta property="og:image" content="https://fluffy-village.dev/assets/yap/gifs/boykisser/thigh_highs.gif">
+    <meta property="og:logo" content="https://fluffy-village.dev/assets/favicon_wiki.png">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" type="image/x-icon" href="/assets/favicon_wiki.png">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/styles/wiki.css">
+</head>
+<body>
+    <div class="content">
+        <div class="head">
+            <div class="topnav">
+                <a class="main" href="/pages/ru/wiki/index.html">The Fluffy Wiki</a>
+                <a href="/pages/eng/index.html">Главная</a>
+                <a class="space"></a>
+                <a class="language" href="/pages/eng/wiki/fluffy_fur/index.html">eng</a>
+                <a class="slash">/</a>
+                <a class="language" href="/pages/ru/wiki/fluffy_fur/index.html">ru</a>
+            </div>
+        </div>
+        <div class="box">
+            <div class="center">
+                <h1 id="home">Главная</h1>
+            </div>
+            <h1 id="about">О</h1>
+            <p>
+                &quot;Fluffy Fur&quot; - мод-библиотека от MaxBogomol.<br>
+                Когда я разрабатывал Wizard&#39;s Reborn, весь код для рендеринга находился внутри мода, но через время я понял, что хочу создавать и другие моды.<br>
+                Поэтому я взял все функции из Wizard&#39;s Reborn и перенёс их в свою библиотеку под названием Fluffy Fur, сильно всё улучшив и добавил много нового.<br>
+                Оно очень пушистое.
+            </p>
+            <p>
+                Если вы хотите использовать мою библиотеку в своём моде, то вы должны знать, что у вас должен быть хотя бы какой-то опыт в моддинге.<br>
+                И помните, библиотека не должна делать всё за вас. Это всего лишь инструмент для упрощения.
+            </p>
+            <br></br>
+            <div class="separator"></div>
+            <h1 id="setup-guide">Руководство по установке</h1>
+            <div class="center">
+                <div class="post">
+<pre><code>gradle.properties:
+minecraft_version = version here
+fluffy_fur_version = version here
+</code></pre>
+                </div>
+            </div>
+            <br></br>
+            <p id="installation-stable"><strong>Установка &quot;Стабильно&quot;</strong></p>
+            <p>Рекомендуемый вариант установки.</p>
+            <div class="center">
+                <div class="post">
+<pre><code>// способ через Modrinth
+repositories {
+  maven {
+       name = &quot;Modrinth&quot;
+       url = &quot;https://api.modrinth.com/maven&quot;
+   }
+}
+
+dependencies {
+   // твой код здесь...
+   implementation fg.deobf(&quot;maven.modrinth:fluffy-fur:${minecraft_version}-${fluffy_fur_version}&quot;)
+}
+ 
+// способ через CurseForge
+repositories {
+   maven { url &quot;https://cursemaven.com&quot;}
+}
+
+dependencies {
+   // твой код здесь...
+   implementation fg.deobf(&quot;curse.maven:fluffy-fur-1097456:${fluffy_fur_version}&quot;) // &lt;-- версия с CurseForge здесь
+}
+</code></pre>
+                </div>
+            </div>
+            <br></br>
+            <p id="installation-dev"><strong>Установка &quot;Разработчик&quot;</strong></p>
+            <p>Я использую этот вариант при разработке модов для быстрого изменения кода.<br>Не рекомендуется.</p>
+            <p>Дублируйте проект, запустите его в IDE и опубликуйте в локальном maven с помощью <em>Running:</em> <code>gradlew publishToMavenLocal</code></p>
+            <div class="center">
+                <div class="post">
+<pre><code>
+repositories {
+   mavenLocal();
+}
+
+dependencies {
+   // твой код здесь...
+   implementation fg.deobf(&quot;mod.maxbogomol.fluffy_fur:fluffy_fur:${minecraft_version}-${fluffy_fur_version}&quot;)
+}
+</code></pre>
+                </div>
+            </div>
+            <br></br>
+            <div class="separator"></div>
+            <h1 id="mixins">Миксины</h1>
+            <p>Fluffy Fur использует миксины, и без соответствующего плагина в вашем проекте игра не запустится.</p>
+            <div class="center">
+                <div class="post">
+<pre><code>buildscript {
+    repositories {
+        maven { url = &#39;https://files.minecraftforge.net/maven&#39; }
+        maven { url = &#39;https://repo.spongepowered.org/repository/maven-public/&#39; }
+        mavenCentral()
+    }
+    dependencies {
+        classpath group: &#39;net.minecraftforge.gradle&#39;, name: &#39;ForgeGradle&#39;, version: &#39;6.0.+&#39;, changing: true
+        classpath group: &#39;org.spongepowered&#39;, name: &#39;mixingradle&#39;, version: &#39;0.7-SNAPSHOT&#39;
+    }
+}
+
+plugins {
+    id &#39;eclipse&#39;
+    id &#39;maven-publish&#39;
+    id &#39;net.minecraftforge.gradle&#39; version &#39;[6.0,6.2)&#39;
+    id &#39;org.spongepowered.mixin&#39; version &#39;[0.7,0.8)&#39;
+}
+</code></pre>
+                </div>
+            </div>
+            <p>Для дополнительной информации обратитесь к <a href="https://github.com/SpongePowered/Mixin/wiki/Mixins-on-Minecraft-Forge">Mixin вики</a>.</p>
+            <br></br>
+            <div class="separator"></div>
+            <h1 id="features">Функции</h1>
+            <div class="separator"></div>
+            <div class="center">
+                <div class="round">
+                    <p>
+                        <a href="https://github.com/MaxBogomol/TheFluffyVillage"><img src="https://img.shields.io/github/stars/maxbogomol/TheFluffyVillage?style=for-the-badge&color=6aa84f&logo=github&label=THIS%20WEBSITE" alt="Github"></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

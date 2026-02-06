@@ -7,3 +7,31 @@ body {
     background-color: #0d1117;
     background-image: radial-gradient(#131922 5px, transparent 0);
 }
+
+p {
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+code {
+    margin: 4px 0;
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+@media screen and (max-width: 960px) {
+    code {
+        margin: 3px 0;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    code {
+        margin: 2px 0;
+        font-size: 14px;
+    }
+}
