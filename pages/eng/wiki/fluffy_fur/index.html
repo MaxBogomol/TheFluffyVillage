@@ -48,17 +48,18 @@
             <h1 id="setup-guide">Setup Guide</h1>
             <div class="center">
                 <div class="post">
+                    <div class="post-code">
 <pre><code>gradle.properties:
 minecraft_version = version here
 fluffy_fur_version = version here
 </code></pre>
-                </div>
+                </div></div>
             </div>
             <br></br>
             <p id="installation-stable"><strong>Installation Stable</strong></p>
             <p>Recommended installation option.</p>
             <div class="center">
-                <div class="post">
+                <div class="post"><div class="post-code">
 <pre><code>// Modrinth way
 repositories {
   maven {
@@ -82,6 +83,7 @@ dependencies {
    implementation fg.deobf(&quot;curse.maven:fluffy-fur-1097456:${fluffy_fur_version}&quot;) // &lt;-- version from CurseForge here
 }
 </code></pre>
+                    </div>
                 </div>
             </div>
             <br></br>
@@ -90,6 +92,7 @@ dependencies {
             <p>Duplicate the project, run it in IDE and publish to local maven using <em>Running:</em> <code>gradlew publishToMavenLocal</code></p>
             <div class="center">
                 <div class="post">
+                    <div class="post-code">
 <pre><code>
 repositories {
    mavenLocal();
@@ -100,6 +103,7 @@ dependencies {
    implementation fg.deobf(&quot;mod.maxbogomol.fluffy_fur:fluffy_fur:${minecraft_version}-${fluffy_fur_version}&quot;)
 }
 </code></pre>
+                    </div>
                 </div>
             </div>
             <br></br>
@@ -108,6 +112,7 @@ dependencies {
             <p>Fluffy Fur uses mixins, and without the appropriate plugin in your project, the game will not start.</p>
             <div class="center">
                 <div class="post">
+                    <div class="post-code">
 <pre><code>buildscript {
     repositories {
         maven { url = &#39;https://files.minecraftforge.net/maven&#39; }
@@ -127,6 +132,7 @@ plugins {
     id &#39;org.spongepowered.mixin&#39; version &#39;[0.7,0.8)&#39;
 }
 </code></pre>
+                    </div>
                 </div>
             </div>
             <p>For more info, consult the <a href="https://github.com/SpongePowered/Mixin/wiki/Mixins-on-Minecraft-Forge">Mixin wiki</a>.</p>
