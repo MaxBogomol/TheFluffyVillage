@@ -48,10 +48,12 @@
             <h1 id="setup-guide">Руководство по установке</h1>
             <div class="center">
                 <div class="post">
+                    <div class="post-code">
 <pre><code>gradle.properties:
 minecraft_version = version here
 fluffy_fur_version = version here
 </code></pre>
+                    </div>
                 </div>
             </div>
             <br></br>
@@ -59,6 +61,7 @@ fluffy_fur_version = version here
             <p>Рекомендуемый вариант установки.</p>
             <div class="center">
                 <div class="post">
+                    <div class="post-code">
 <pre><code>// способ через Modrinth
 repositories {
   maven {
@@ -82,6 +85,7 @@ dependencies {
    implementation fg.deobf(&quot;curse.maven:fluffy-fur-1097456:${fluffy_fur_version}&quot;) // &lt;-- версия с CurseForge здесь
 }
 </code></pre>
+                    </div>
                 </div>
             </div>
             <br></br>
@@ -90,6 +94,7 @@ dependencies {
             <p>Дублируйте проект, запустите его в IDE и опубликуйте в локальном maven с помощью <em>Running:</em> <code>gradlew publishToMavenLocal</code></p>
             <div class="center">
                 <div class="post">
+                    <div class="post-code">
 <pre><code>
 repositories {
    mavenLocal();
@@ -100,6 +105,7 @@ dependencies {
    implementation fg.deobf(&quot;mod.maxbogomol.fluffy_fur:fluffy_fur:${minecraft_version}-${fluffy_fur_version}&quot;)
 }
 </code></pre>
+                    </div>
                 </div>
             </div>
             <br></br>
@@ -108,6 +114,7 @@ dependencies {
             <p>Fluffy Fur использует миксины, и без соответствующего плагина в вашем проекте игра не запустится.</p>
             <div class="center">
                 <div class="post">
+                    <div class="post-code">
 <pre><code>buildscript {
     repositories {
         maven { url = &#39;https://files.minecraftforge.net/maven&#39; }
@@ -127,20 +134,13 @@ plugins {
     id &#39;org.spongepowered.mixin&#39; version &#39;[0.7,0.8)&#39;
 }
 </code></pre>
+                    </div>
                 </div>
             </div>
             <p>Для дополнительной информации обратитесь к <a href="https://github.com/SpongePowered/Mixin/wiki/Mixins-on-Minecraft-Forge">Mixin вики</a>.</p>
             <br></br>
             <div class="separator"></div>
             <h1 id="features">Функции</h1>
-            <div class="separator"></div>
-            <div class="center">
-                <div class="round">
-                    <p>
-                        <a href="https://github.com/MaxBogomol/TheFluffyVillage"><img src="https://img.shields.io/github/stars/maxbogomol/TheFluffyVillage?style=for-the-badge&color=6aa84f&logo=github&label=THIS%20WEBSITE" alt="Github"></a>
-                    </p>
-                </div>
-            </div>
         </div>
     </div>
 </body>
