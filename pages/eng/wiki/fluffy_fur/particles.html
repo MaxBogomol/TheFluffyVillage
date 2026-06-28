@@ -29,7 +29,189 @@
             </div>
         </div>
         <div class="box">
-
+            <p>
+                Overuse of particles can cause low performance due to the huge amount of polygons and logic of every single one of them.<br>
+                Particles are <em>addition</em> to graphics, not its full <em>replacement</em>.
+            </p>
+            <br>
+            <div class="separator"></div>
+            <a href="#particle-builder" class="no-decoration"><h1 id="particle-builder">ParticleBuilder</h1></a>
+            <p>
+                ParticleBuilder - Class for simply summoning particles with Fluffy Fur.<br>
+                <br>
+                <code>getParticleOptions() -> GenericParticleOptions</code> - <br>
+                <br>
+                <code>setRenderType(RenderType)</code> - <br>
+                <br>
+                <code>setParticleRenderType(ParticleRenderType)</code> - sets <strong>particle</strong> Render type.<br>
+                It's used for Vanilla Render types.<br>
+                Example: <code>setParticleRenderType(ParticleRenderType.PARTICLE_SHEET_OPAQUE)</code><br>
+                <br>
+                <code>setBufferSource(MultiBufferSource)</code> - <br>
+                <br>
+                <code>setFormat(VertexFormat)</code> - <br>
+                <br>
+                <code>setBehavior(ParticleBehavior)</code> - <br>
+                <br>
+                <code>setColorData(ColorParticleData)</code> - <br>
+                <br>
+                <code>setTransparencyData(GenericParticleData)</code> - <br>
+                <br>
+                <code>setScaleData(GenericParticleData)</code> - <br>
+                <br>
+                <code>setSpinData(SpinParticleData)</code> - <br>
+                <br>
+                <code>setLightData(LightParticleData)</code> - <br>
+                <br>
+                <code>setSpriteData(SpriteParticleData)</code> - <br>
+                <br>
+                <code>addTickActor(Consumer&lt;GenericParticle&gt;), addSpawnActor(Consumer&lt;GenericParticle&gt;), addRenderActor(Consumer&lt;GenericParticle&gt;), addRenderPostActor(Consumer&lt;GenericParticle&gt;)</code> - .<br>
+                .<br>
+                Example:
+            </p>
+            <div class="center">
+                <div class="post">
+                    <div class="post-code">
+<pre><code>final Consumer&lt;GenericParticle&gt; target = p -&gt; {
+    //p &lt;-- particle
+    p.setSpeed(p.getSpeed().add(0, 0.1f, 0));
+};
+particleBuilder.addTickActor(target);
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <p>
+                <br>
+                <code>clearActors(), clearTickActor(), clearSpawnActors(), clearRenderActors(), clearRenderPostActors()</code> - <br>
+                <br>
+                <code>setDiscardFunction(GenericParticleOptions.DiscardFunctionType)</code> - [<code>NONE, INVISIBLE, ENDING_CURVE_INVISIBLE</code>]<br>
+                <br>
+                <code>setLifetime(int)</code> - <br>
+                <br>
+                <code>setLifetime(int, int)</code> - <br>
+                <br>
+                <code>setGravity(int)</code> - <br>
+                <br>
+                <code>setGravity(int, int)</code> - <br>
+                <br>
+                <code>setFriction(int)</code> - <br>
+                .<br>
+                .<br>
+                <br>
+                <code>setFriction(int, int)</code> - <br>
+                <br>
+                <code>enableCull(), disableCull(), setShouldCull(boolean)</code> - <br>
+                .<br>
+                <code>false</code> by default.<br>
+                <br>
+                <code>enableRenderTraits(), disableRenderTraits(), setShouldRenderTraits(boolean)</code> - <br>
+                .<br>
+                <code>true</code> by default.<br>
+                <br>
+                <code>enablePhysics(), disablePhysics(), setHasPhysics(boolean)</code> - <br>
+                .<br>
+                <code>true</code> by default.<br>
+                <br>
+                <code>randomVelocity(double), randomVelocity(double, double), randomVelocity(double, double, double)</code> - <br>
+                .<br>
+                <br>
+                <code>flatRandomVelocity(double, double, double)</code> - <br>
+                .<br>
+                <br>
+                <code>addVelocity(double, double, double)</code> - <br>
+                <br>
+                <code>setVelocity(double, double, double)</code> - <br>
+                <br>
+                <code>randomOffset(double), randomOffset(double, double), randomOffset(double, double, double)</code> - <br>
+                .<br>
+                <br>
+                <code>flatRandomOffset(double, double, double)</code> - <br>
+                .<br>
+                <br>
+                <code>enableForce(), enableForce(), enableForce(boolean)</code> - <br>
+                .<br>
+                <code>true</code> by default.<br>
+                <br>
+                <code>setDistance(double)</code> - <br>
+                .<br>
+                <code>100</code> by default.<br>
+                <br>
+                <code>enableDistanceSpawn(), disableDistanceSpawn(), setDistanceSpawn(boolean)</code> - <br>
+                .<br>
+                <code>true</code> by default.<br>
+                <br>
+                <code>addAdditionalBuilder(ParticleBuilder)</code> - <br>
+                .<br>
+                .<br>
+                <br>
+                <code>clearAdditionalBuilders()</code> - <br>
+                <br>
+                <code>spawn(Level, Vec3), spawn(Level, double, double, double)</code> - <br>
+                <br>
+                <code>repeat(Level, Vec3, int), repeat(Level, double, double, double, int)</code> - <br>
+                <br>
+                <code>repeat(Level, Vec3, int, float), repeat(Level, double, double, double, int, float)</code> - <br>
+                <br>
+                <code>spawnLine(Level, Vec3, Vec3)</code> - <br>
+                <br>
+                <code>repeatLine(Level, Vec3, Vec3, int)</code> - <br>
+                <br>
+                <code>repeatLine(Level, Vec3, Vec3, int, float)</code> - <br>
+                <br>
+                <code>spawnVoxelShape(Level, Vec3, VoxelShape), spawnVoxelShape(Level, double, double, double, VoxelShape)</code> - <br>
+                <br>
+                <code>pawnVoxelShape(Level, Vec3, VoxelShape, int), spawnVoxelShape(Level, double, double, double, VoxelShape, int)</code> - <br>
+                <br>
+                <code>spawnVoxelShape(Level, Vec3, VoxelShape, int, float), spawnVoxelShape(Level, double, double, double, VoxelShape, int, float)</code> - <br>
+                <br>
+                <code>spawnBoykisser(Level, Vec3, int, int, float, float, float, float, float, float)</code> - <br>
+                <br>
+                <code>spawnBoykisser(Level, Vec3, int, int, float, ParticleBuilder, float, float, float, float, float)</code> - <br>
+                <br>
+                <code>create(ParticleType&lt;?&gt;)</code> - <br>
+                <br>
+                <code>create(RegistryObject&lt;?&gt;)</code> - <br>
+                <br>
+                <code>create(GenericParticleOptions)</code> - <br>
+                <br>
+                :
+            </p>
+            <div class="center">
+                <div class="post">
+                    <div class="post-code">
+<pre><code>ParticleBuilder.create(FluffyFurParticles.WISP)
+        .setColorData(ColorParticleData.create(0, 0, 1, 1, 0, 0).build())
+        .setTransparencyData(GenericParticleData.create(0.5f, 0).setEasing(Easing.QUARTIC_OUT).build())
+        .setScaleData(GenericParticleData.create(0.3f, 2, 0).setEasing(Easing.ELASTIC_OUT).build())
+        .setLifetime(200, 100)
+        .randomVelocity(0.35f)
+        .repeat(level, x, y, z, 50);
+</code></pre>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="separator"></div>
+            <a href="#particle-behavior" class="no-decoration"><h1 id="particle-behavior">ParticleBehavior</h1></a>
+            <div class="separator"></div>
+            <a href="#cube-particle-behavior" class="no-decoration"><h1 id="cube-particle-behavior">CubeParticleBehavior</h1></a>
+            <div class="separator"></div>
+            <a href="#sphere-particle-behavior" class="no-decoration"><h1 id="sphere-particle-behavior">SphereParticleBehavior</h1></a>
+            <div class="separator"></div>
+            <a href="#spark-particle-behavior" class="no-decoration"><h1 id="spark-particle-behavior">SparkParticleBehavior</h1></a>
+            <div class="separator"></div>
+            <a href="#trail-particle-behavior" class="no-decoration"><h1 id="trail-particle-behavior">TrailParticleBehavior</h1></a>
+            <div class="separator"></div>
+            <a href="#generic-particle-data" class="no-decoration"><h1 id="generic-particle-data">GenericParticleData</h1></a>
+            <div class="separator"></div>
+            <a href="#color-particle-data" class="no-decoration"><h1 id="color-particle-data">ColorParticleData</h1></a>
+            <div class="separator"></div>
+            <a href="#spin-particle-data" class="no-decoration"><h1 id="spin-particle-data">SpinParticleData</h1></a>
+            <div class="separator"></div>
+            <a href="#light-particle-data" class="no-decoration"><h1 id="light-particle-data">LightParticleData</h1></a>
+            <div class="separator"></div>
+            <a href="#sprite-particle-data" class="no-decoration"><h1 id="sprite-particle-data">SpriteParticleData</h1></a>
         </div>
         <div class="box">
             <a href="#footer" class="no-decoration"><h1 id="footer">Fluffy Fur Wiki:</h1></a>
