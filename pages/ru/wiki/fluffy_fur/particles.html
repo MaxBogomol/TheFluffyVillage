@@ -36,21 +36,19 @@
                 Частицы в больших объёмах вызывают сильную нагрузку из-за огромного количества полигонов и логики каждой отдельной частицы.<br>
                 Частицы являются лишь <em>дополнением</em>, а не <em>заменой</em> графики.
             </p>
+            <br>
+            <div class="separator"></div>
             <div class="center">
-                <h1 id="particle-builder">ParticleBuilder</h1>
+                <a href="#particle-builder" class="no-decoration"><h1 id="particle-builder">ParticleBuilder</h1></a>
             </div>
             <p>
-                ParticleBuilder - класс для простого вызова частиц в Fluffy Fur.
-            </p>
-            <div class="center">
-                <h1 id="methods">Методы</h1>
-            </div>
-            <p>
-                <code>getParticleOptions() -> GenericParticleOptions</code> - <br>
+                ParticleBuilder (конструктор частиц) - класс для простого вызова частиц в Fluffy Fur.<br>
+                <br>
+                <code>getParticleOptions() -> GenericParticleOptions</code> - возвращает параметры частицы.<br>
                 <br>
                 <code>setRenderType(RenderType)</code> - устанавливает тип рендера.<br>
                 <br>
-                <code>setParticleRenderType(ParticleRenderType)</code> - устанавливает тип рендера <strong>частицы</strong><br>
+                <code>setParticleRenderType(ParticleRenderType)</code> - устанавливает тип рендера <strong>частицы</strong>.<br>
                 Используется для ванильных типов рендера.<br>
                 Например: <code>setParticleRenderType(ParticleRenderType.PARTICLE_SHEET_OPAQUE)</code><br>
                 <br>
@@ -72,7 +70,7 @@
                 <br>
                 <code>setSpriteData(SpriteParticleData)</code> - устанавливает данные спрайта.<br>
                 <br>
-                <code>addTickActor(Consumer&lt;GenericParticle&gt;), addSpawnActor(Consumer&lt;GenericParticle&gt;), addRenderActor(Consumer&lt;GenericParticle&gt;), addRenderPostActor(Consumer&lt;GenericParticle&gt;)</code> - вызывает Consumer каждый раз при тике, спавне, тике рендера и конце тика рендера.<br>
+                <code>addTickActor(Consumer&lt;GenericParticle&gt;), addSpawnActor(Consumer&lt;GenericParticle&gt;), addRenderActor(Consumer&lt;GenericParticle&gt;), addRenderPostActor(Consumer&lt;GenericParticle&gt;)</code> - устанавливает действия, которые вызываются каждый раз при тике, спавне, тике рендера и конце тика рендера.<br>
                 Используется для более гибкой настройки логики частицы.<br>
                 Например:
             </p>
@@ -92,84 +90,97 @@ particleBuilder.addTickActor(target);
                 <br>
                 <code>clearActors(), clearTickActor(), clearSpawnActors(), clearRenderActors(), clearRenderPostActors()</code> - очищает все действия.<br>
                 <br>
-                <code>setDiscardFunction(GenericParticleOptions.DiscardFunctionType)</code>  - устанавливает функцию сброса (<code>NONE, INVISIBLE, ENDING_CURVE_INVISIBLE</code>)<br>
+                <code>setDiscardFunction(GenericParticleOptions.DiscardFunctionType)</code>  - устанавливает функцию сброса [<code>NONE, INVISIBLE, ENDING_CURVE_INVISIBLE</code>]<br>
                 <br>
-                <code>setLifetime(int)</code> - устанавливает время жизни.<br>
+                <code>setLifetime(int)</code> - устанавливает значение времени жизни.<br>
                 <br>
-                <code>setLifetime(int, int)</code> - устанавливает время жизни плюс случайное значение от нуля до второго значения.<br>
+                <code>setLifetime(int, int)</code> - устанавливает значение времени жизни в виде суммы первого значения и случайного числа от нуля до второго значения.<br>
                 <br>
-                <code>setGravity(int)</code> - устанавливает гравитацию.<br>
+                <code>setGravity(int)</code> - устанавливает значение гравитации.<br>
                 <br>
-                <code>setGravity(int, int)</code> - устанавливает гравитацию плюс случайное значение от нуля до второго значения.<br>
+                <code>setGravity(int, int)</code> - устанавливает значение гравитации в виде суммы первого значения и случайного числа от нуля до второго значения.<br>
                 <br>
-                <code>setFriction(int)</code> - устанавливает трение.<br>
+                <code>setFriction(int)</code> - устанавливает значение трения.<br>
                 Работает по логике каждый тик умножает скорость на значение трения.<br>
                 То есть, при значениях от 0 до 1, частица будет замедлятся, а при значениях больше 1 ускоряться.<br>
                 <br>
-                <code>setFriction(int, int)</code> - устанавливает трение плюс случайное значение от нуля до второго значения.<br>
+                <code>setFriction(int, int)</code> - устанавливает значение трения в виде суммы первого значения и случайного числа от нуля до второго значения.<br>
                 <br>
-                <code>enableCull(), disableCull(), setShouldCull(boolean)</code> - устанавливает оптимизацию рендера.<br>
-                Частицы не будут отображаться, если камера не будет направлена в сторону частицы, но из-за этого, частица может отображаться некорректно при поворотах камеры.<br>
+                <code>enableCull(), disableCull(), setShouldCull(boolean)</code> - устанавливает значение оптимизации рендера.<br>
+                Частицы не будут отображаться, если камера не будет направлена в их сторону, но из-за этого частица может отображаться некорректно при поворотах камеры.<br>
                 <code>false</code> по умолчанию.<br>
                 <br>
-                <code>enablePhysics(), disablePhysics(), setHasPhysics(boolean)</code> - устанавливает физику.<br>
+                <code>enableRenderTraits(), disableRenderTraits(), setShouldRenderTraits(boolean)</code> - устанавливает значение обновления параметров при рендер тике. <br>
                 Используется для более плавного отображения.<br>
                 <code>true</code> по умолчанию.<br>
                 <br>
-                <code>setGravity(int)</code> - устанавливает гравитацию.<br>
+                <code>enablePhysics(), disablePhysics(), setHasPhysics(boolean)</code> - устанавливает физику.<br>
                 При отключенной физике игнорирует коллизию с блоками.<br>
                 <code>true</code> по умолчанию.<br>
                 <br>
-                <code>randomVelocity(double), randomVelocity(double, double), randomVelocity(double, double, double)</code> - <br>
+                <code>randomVelocity(double), randomVelocity(double, double), randomVelocity(double, double, double)</code> - устанавливает случайное значение скорости.<br>
+                Значение вычисляется через синус и косинус, то есть область в виде сферы.<br>
                 <br>
-                <code>flatRandomVelocity(double, double, double)</code> - <br>
+                <code>flatRandomVelocity(double, double, double)</code> - устанавливает случайное значение скорости напрямую.<br>
+                Значение вычисляется как есть, то есть область в виде куба.<br>
                 <br>
-                <code>addVelocity(double, double, double)</code> - <br>
+                <code>addVelocity(double, double, double)</code> - добавляет значение скорости.<br>
                 <br>
-                <code>setVelocity(double, double, double)</code> - <br>
+                <code>setVelocity(double, double, double)</code> - устанавливает значение скорости.<br>
                 <br>
-                <code>randomOffset(double), randomOffset(double, double), randomOffset(double, double, double)</code> - <br>
+                <code>randomOffset(double), randomOffset(double, double), randomOffset(double, double, double)</code> - устанавливает случайное значение смещения.<br>
+                Значение вычисляется через синус и косинус, то есть область в виде сферы.<br>
                 <br>
-                <code>flatRandomOffset(double, double, double)</code> - <br>
+                <code>flatRandomOffset(double, double, double)</code> - устанавливает случайное значение смещения напрямую.<br>
+                Значение вычисляется как есть, то есть область в виде куба.<br>
                 <br>
-                <code>enableForce(), enableForce(), enableForce(boolean)</code> - <br>
+                <code>enableForce(), enableForce(), enableForce(boolean)</code> - устанавливает значение принудительного появления.<br>
+                Ванильный параметр, частица с расстоянием до камеры больше 32 блока появляться не будет.<br>
                 <code>true</code> по умолчанию.<br>
                 <br>
-                <code>setDistance(double)</code> - <br>
+                <code>setDistance(double)</code> - устанавливает значение дистанции появления.<br>
+                Если включено значение появление на дистанции, то частица с расстоянием до камеры больше указанной появляться не будет.<br>
+                <code>100</code> по умолчанию.<br>
                 <br>
-                <code>enableDistanceSpawn(), disableDistanceSpawn(), setDistanceSpawn(boolean)</code> - <br>
+                <code>enableDistanceSpawn(), disableDistanceSpawn(), setDistanceSpawn(boolean)</code> - устанавливает значение появления на дистанции.<br>
+                Если включено, то частица с расстоянием до камеры больше указанной появляться не будет.<br>
+                <code>true</code> по умолчанию.<br>
                 <br>
-                <code>addAdditionalBuilder(ParticleBuilder)</code> - <br>
+                <code>addAdditionalBuilder(ParticleBuilder)</code> - добавляет дополнительные конструкторы частиц.<br>
+                При создании частицы все дополнительные конструкторы частиц так же создают частицу с теми же параметрами.<br>
+                То есть позиция и направление будут такие же.<br>
                 <br>
-                <code>clearAdditionalBuilders()</code> - <br>
+                <code>clearAdditionalBuilders()</code> - очищает все дополнительные конструкторы частиц.<br>
                 <br>
-                <code>spawn(Level, Vec3), spawn(Level, double, double, double)</code> - <br>
+                <code>spawn(Level, Vec3), spawn(Level, double, double, double)</code> - создаёт частицу на указанных координатах.<br>
                 <br>
-                <code>repeat(Level, Vec3, int), repeat(Level, double, double, double, int)</code> - <br>
+                <code>repeat(Level, Vec3, int), repeat(Level, double, double, double, int)</code> - создаёт частицу на указанных координатах несколько раз.<br>
                 <br>
-                <code>repeat(Level, Vec3, int, float), repeat(Level, double, double, double, int, float)</code> - <br>
+                <code>repeat(Level, Vec3, int, float), repeat(Level, double, double, double, int, float)</code> - создаёт частицу на указанных координатах несколько раз с определённым шансом.<br>
                 <br>
-                <code>spawnLine(Level, Vec3, Vec3)</code> - <br>
+                <code>spawnLine(Level, Vec3, Vec3)</code> - создаёт частицу на линии между координатами.<br>
                 <br>
-                <code>repeatLine(Level, Vec3, Vec3, int)</code> - <br>
+                <code>repeatLine(Level, Vec3, Vec3, int)</code> - создаёт частицу на линии между координатами несколько раз.<br>
                 <br>
-                <code>repeatLine(Level, Vec3, Vec3, int, float)</code> - <br>
+                <code>repeatLine(Level, Vec3, Vec3, int, float)</code> - создаёт частицу на линии между координатами несколько раз с определённым шансом.<br>
                 <br>
-                <code>spawnVoxelShape(Level, Vec3, VoxelShape), spawnVoxelShape(Level, double, double, double, VoxelShape)</code> - <br>
+                <code>spawnVoxelShape(Level, Vec3, VoxelShape), spawnVoxelShape(Level, double, double, double, VoxelShape)</code> - создаёт частицу на каждой грани указанной воксельной формы.<br>
                 <br>
-                <code>pawnVoxelShape(Level, Vec3, VoxelShape, int), spawnVoxelShape(Level, double, double, double, VoxelShape, int)</code> - <br>
+                <code>pawnVoxelShape(Level, Vec3, VoxelShape, int), spawnVoxelShape(Level, double, double, double, VoxelShape, int)</code> - создаёт частицу на каждой грани указанной воксельной формы несколько раз.<br>
                 <br>
-                <code>spawnVoxelShape(Level, Vec3, VoxelShape, int, float), spawnVoxelShape(Level, double, double, double, VoxelShape, int, float)</code> - <br>
+                <code>spawnVoxelShape(Level, Vec3, VoxelShape, int, float), spawnVoxelShape(Level, double, double, double, VoxelShape, int, float)</code> - создаёт частицу на каждой грани указанной воксельной формы с определённым шансом.<br>
                 <br>
-                <code>spawnBoykisser(Level, Vec3, int, int, float, float, float, float, float, float)</code> - <br>
+                <code>spawnBoykisser(Level, Vec3, int, int, float, float, float, float, float, float)</code> - создаёт кучу частиц в форме Бойкиссера.<br>
                 <br>
-                <code>spawnBoykisser(Level, Vec3, int, int, float, ParticleBuilder, float, float, float, float, float)</code> - <br>
+                <code>spawnBoykisser(Level, Vec3, int, int, float, ParticleBuilder, float, float, float, float, float)</code> - создаёт кучу частиц в форме Бойкиссера с конструктором частиц для румянца.<br>
                 <br>
-                <code>create(ParticleType&lt;?&gt;), create(ParticleType&lt;?&gt;)</code> - <br>
+                <code>create(ParticleType&lt;?&gt;)</code> - создаёт конструктор частиц из указанного типа частиц.<br>
                 <br>
-                <code>create(ParticleType&lt;?&gt;), create(RegistryObject&lt;?&gt;)</code> - <br>
+                <code>create(RegistryObject&lt;?&gt;)</code> - создаёт конструктор частиц из указанного объекта регистрации частицы.<br>
                 <br>
-                <code>create(GenericParticleOptions)</code> - <br>
+                <code>create(GenericParticleOptions)</code> - создаёт конструктор частиц с указанными параметрами частиц.<br>
+                <br>
+                Пример использования:
             </p>
             <div class="center">
                 <div class="post">
@@ -184,6 +195,47 @@ particleBuilder.addTickActor(target);
 </code></pre>
                     </div>
                 </div>
+            </div>
+            <br>
+            <div class="separator"></div>
+            <div class="center">
+                <a href="#particle-behavior" class="no-decoration"><h1 id="particle-behavior">ParticleBehavior</h1></a>
+            </div>
+            <div class="separator"></div>
+            <div class="center">
+                <a href="#cube-particle-behavior" class="no-decoration"><h1 id="cube-particle-behavior">CubeParticleBehavior</h1></a>
+            </div>
+            <div class="separator"></div>
+            <div class="center">
+                <a href="#sphere-particle-behavior" class="no-decoration"><h1 id="sphere-particle-behavior">SphereParticleBehavior</h1></a>
+            </div>
+            <div class="separator"></div>
+            <div class="center">
+                <a href="#spark-particle-behavior" class="no-decoration"><h1 id="spark-particle-behavior">SparkParticleBehavior</h1></a>
+            </div>
+            <div class="separator"></div>
+            <div class="center">
+                <a href="#trail-particle-behavior" class="no-decoration"><h1 id="trail-particle-behavior">TrailParticleBehavior</h1></a>
+            </div>
+            <div class="separator"></div>
+            <div class="center">
+                <a href="#generic-particle-data" class="no-decoration"><h1 id="generic-particle-data">GenericParticleData</h1></a>
+            </div>
+            <div class="separator"></div>
+            <div class="center">
+                <a href="#color-particle-data" class="no-decoration"><h1 id="color-particle-data">ColorParticleData</h1></a>
+            </div>
+            <div class="separator"></div>
+            <div class="center">
+                <a href="#spin-particle-data" class="no-decoration"><h1 id="spin-particle-data">SpinParticleData</h1></a>
+            </div>
+            <div class="separator"></div>
+            <div class="center">
+                <a href="#light-particle-data" class="no-decoration"><h1 id="light-particle-data">LightParticleData</h1></a>
+            </div>
+            <div class="separator"></div>
+            <div class="center">
+                <a href="#sprite-particle-data" class="no-decoration"><h1 id="sprite-particle-data">SpriteParticleData</h1></a>
             </div>
         </div>
     </div>
