@@ -1,0 +1,8 @@
+Contributing Guide
+
+The Fluffy Village website is the personal website of MaxBogomol (Pink Joke) and their The Fluffy Village community.
+
+Only trusted community members can edit the website's appearance and content.
+You can, however, suggest technical changes to the code, although acceptance is not guaranteed.
+
+Meow.
