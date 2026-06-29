@@ -1,0 +1,1 @@
+# Правила поведения The Fluffy Village
