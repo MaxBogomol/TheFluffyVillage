@@ -29,6 +29,6 @@ including but not limited to artificial intelligence, natural language processin
 modifications, or updates based on the Software code. Any usage of the Software in an AI-training dataset is considered a breach of this License.
 2. Any modification of the project using AI is prohibited.
 3. Any modification of the project by persons in any way related to machine learning technology or publicly using it to create projects is prohibited.
-4. The Java code root path must remain mod.maxbogomol.fluffy_fur and cannot be changed in modifications, for the purposes of attribution and maintaining compatibility with other projects.
+4. The Java code root path must remain mod.maxbogomol.wizards_reborn and cannot be changed in modifications, for the purposes of attribution and maintaining compatibility with other projects.
 5. Any forks and modifications must prominently attribute the author of original project on their public pages.
 6. All additional restrictions in this license must also apply to any modifications of the project or its parts.
