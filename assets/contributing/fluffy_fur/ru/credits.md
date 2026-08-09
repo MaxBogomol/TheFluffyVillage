@@ -8,6 +8,10 @@
 Модели и текстуры плюшек от [OnixTheCat](https://fluffy-village.dev/pages/eng/yappers/onixthecat.html)  
 Текстура плюшки Firch от [Firch](https://github.com/Firch)  
 
+## Разное
+
+Пикселизированная текстура ЙонКаБлока от [OnixTheCat](https://fluffy-village.dev/pages/eng/yappers/onixthecat.html)
+
 ## Языки
 
 ### Официально поддерживаемые языки:
