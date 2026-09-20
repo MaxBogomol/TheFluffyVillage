@@ -1,0 +1,4 @@
+# Ассеты
+
+### Ассеты MaxBogomol:
+- sprites/
